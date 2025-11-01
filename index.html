@@ -3,191 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apoorva Srinivasan</title>
-
-  <!-- Google font close to Jon's style -->
+  <title>Apoorva Srinivasan – SWE Intern @ SpatialGuide</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <style>
-    :root{
-      --bg:#fafafa;
-      --text:#111;
-      --sub:#666;
-      --accent:#0077ff;
-    }
+    :root{--bg:#fafafa;--text:#111;--sub:#555;--mute:#999;--accent:#0077ff;}
     *{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    h1,h2,h3{letter-spacing:-.025em;font-weight:500;}
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
-
-    /* ---------- HERO ---------- */
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:0 1.5rem;
-    }
-    .hero h1{
-      font-size:clamp(3rem,10vw,6.5rem);
-      font-weight:300;
-      letter-spacing:-.04em;
-      margin-bottom:.5rem;
-    }
-    .hero .tagline{
-      font-size:clamp(1rem,3vw,1.4rem);
-      color:var(--sub);
-      margin-bottom:2rem;
-    }
-    .hero .links a{
-      margin:0 .8rem;
-      font-size:1rem;
-      color:var(--sub);
-      transition:color .2s;
-    }
-    .hero .links a:hover{color:var(--accent);}
-
-    /* ---------- SECTIONS ---------- */
-    section{
-      max-width:800px;
-      margin:0 auto;
-      padding:5rem 1.5rem;
-    }
-    section h2{
-      font-size:1.8rem;
-      font-weight:500;
-      margin-bottom:1.5rem;
-      letter-spacing:-.02em;
-    }
-    .fade-in{
-      opacity:0;
-      transform:translateY(20px);
-      animation:fadeUp .8s ease forwards;
-    }
-    @keyframes fadeUp{
-      to{opacity:1;transform:translateY(0);}
-    }
-
-    /* ---------- CARDS ---------- */
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:1.2rem;
-    }
-    .card{
-      background:#fff;
-      border:1px solid #e5e5e5;
-      border-radius:8px;
-      padding:1.5rem;
-      transition:transform .2s,box-shadow .2s;
-    }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 8px 20px rgba(0,0,0,.06);
-    }
-    .card h3{
-      font-size:1.1rem;
-      margin-bottom:.5rem;
-      font-weight:500;
-    }
-    .card p{
-      font-size:.95rem;
-      color:var(--sub);
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer{
-      text-align:center;
-      padding:3rem 1rem;
-      font-size:.9rem;
-      color:var(--sub);
-    }
-
-    /* ---------- RESPONSIVE ---------- */
-    @media(max-width:600px){
-      section{padding:3rem 1rem;}
-    }
+    ul{list-style:none;padding-left:0;}
+    header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1.5rem;}
+    header h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:300;margin-bottom:.4rem;}
+    header .tagline{font-size:clamp(1rem,3vw,1.4rem);color:var(--sub);}
+    header .links{margin-top:2rem;display:flex;gap:1.2rem;font-size:1rem;}
+    header .links a{color:var(--sub);transition:color .2s;}
+    header .links a:hover{color:var(--accent);}
+    section{max-width:820px;margin:0 auto;padding:5rem 1.5rem;}
+    section h2{font-size:1.8rem;margin-bottom:2rem;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+    .card{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:1.5rem;transition:transform .2s,box-shadow .2s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.06);}
+    .card h3{font-size:1.1rem;margin-bottom:.5rem;}
+    .card .tech{font-size:.85rem;color:var(--mute);}
+    .skill-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax 220px,1fr);gap:1.5rem 2rem;}
+    .skill-cols h4{font-size:1rem;margin-bottom:.6rem;color:var(--accent);}
+    .skill-cols ul li{font-size:.95rem;margin-bottom:.25rem;color:var(--sub);}
+    footer{text-align:center;padding:3rem 1rem;font-size:.9rem;color:var(--mute);}
+    @media(max-width:600px){section{padding:3rem 1rem;}}
   </style>
 </head>
 <body>
 
-  <!-- ---------- HERO ---------- -->
-  <div class="hero fade-in">
-    <h1>Apoorva Srinivasan</h1>
-    <p class="tagline">SWE Intern @ SpatialGuide&nbsp;&nbsp;|&nbsp;&nbsp;Backend & Cloud Engineer</p>
-    <div class="links">
-      <a href="mailto:apoorvasrinivasan59@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/apoorva-srinivasan-bba609258" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Apoorva5544" target="_blank">GitHub</a>
-      <a href="./Apoorva%20resume%20(1)%20(1).pdf" download>Résumé</a>
+<!-- ---------- HERO ---------- -->
+<header>
+  <h1>Apoorva Srinivasan</h1>
+  <p class="tagline">SWE Intern @ SpatialGuide | Backend & Cloud Engineer</p>
+  <div class="links">
+    <a href="mailto:apoorvasrinivasan59@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/apoorva-srinivasan-bba609258" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Apoorva5544" target="_blank">GitHub</a>
+    <a href="./Apoorva%20resume%20(1)%20(1).pdf" download>Résumé</a>
+    <a href="https://leetcode.com/u/apoorva2210005/" target="_blank">LeetCode</a>
+  </div>
+</header>
+
+<!-- ---------- ABOUT / HIGHLIGHTS ---------- -->
+<section>
+  <h2>Headlines</h2>
+  <ul>
+    <li>🏆 <strong>National Winner</strong> – Techgium 8th Edition (L&T) – underwater inspection robot.</li>
+    <li>💻 <strong>247+ LeetCode problems</strong> solved across all major patterns.</li>
+    <li>☁️ <strong>15+ production n8n workflows</strong> automating business processes end-to-end.</li>
+    <li>🎓 <strong>9.24 CGPA</strong> – B.E. Robotics & Automation (2022-2026).</li>
+  </ul>
+</section>
+
+<!-- ---------- SKILLS ---------- -->
+<section>
+  <h2>Skills</h2>
+  <div class="skill-cols">
+    <div>
+      <h4>Languages & Core</h4>
+      <ul>
+        <li>Python (FastAPI, Flask, Django)</li>
+        <li>Java</li>
+        <li>C</li>
+        <li>Arduino / Embedded-C</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Cloud & DevOps</h4>
+      <ul>
+        <li>AWS: Lambda, Step Functions, Aurora-Serverless, S3, RDS, DynamoDB, API Gateway, CloudFront, Route 53, IAM, CloudWatch, SNS, SES, VPC</li>
+        <li>Docker & containerised micro-services</li>
+        <li>GitHub Actions CI/CD</li>
+        <li>Terraform (learning)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Databases</h4>
+      <ul>
+        <li>MySQL, PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Aurora Serverless</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Automation & Tools</h4>
+      <ul>
+        <li>n8n (15+ production workflows)</li>
+        <li>Salesforce Communities & SFDX</li>
+        <li>ROS, RoboDK, Fusion 360</li>
+        <li>Tailwind CSS, Figma</li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <!-- ---------- ABOUT ---------- -->
-  <section class="fade-in">
-    <h2>About</h2>
-    <p>
-      I build backend systems and cloud-native services at <strong>SpatialGuide</strong> using FastAPI, Docker and AWS.
-      My focus is scalable APIs, serverless workflows and automation pipelines that just work.
-    </p>
-    <p>
-      🏆 National winner of <strong>Techgium 8th Edition</strong> for an underwater inspection robot with real-time
-      defect detection and autonomous navigation.
-    </p>
-  </section>
+<!-- ---------- PROJECTS ---------- -->
+<section>
+  <h2>Projects</h2>
+  <div class="card-grid">
 
-  <!-- ---------- PROJECTS ---------- -->
-  <section class="fade-in">
-    <h2>Selected Work</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Spatial Micro-services</h3>
-        <p>FastAPI + Lambda + Step Functions for geo-spatial data pipelines.</p>
-      </div>
-      <div class="card">
-        <h3>Underwater Robot</h3>
-        <p>Techgium-winning autonomous inspection bot with ROS & computer vision.</p>
-      </div>
-      <div class="card">
-        <h3>Agrobot</h3>
-        <p>Semi-autonomous farming robot – Smart India Hackathon finalist.</p>
-      </div>
-      <div class="card">
-        <h3>Salesforce Communities</h3>
-        <p>Portal sites with CI/CD via GitHub Actions and SFDX.</p>
-      </div>
+    <!-- GitHub / live projects -->
+    <div class="card">
+      <h3>Spatial Micro-services</h3>
+      <p class="tech">FastAPI • Docker • AWS Lambda / Step Functions • Aurora Serverless</p>
+      <p>Geo-spatial backend serving real-time location analytics for SpatialGuide.</p>
     </div>
-  </section>
 
-  <!-- ---------- SKILLS ---------- -->
-  <section class="fade-in">
-    <h2>Skills</h2>
-    <p>
-      Python (FastAPI, Django), AWS (Lambda, Aurora, S3, Step Functions), Docker, Terraform, GitHub Actions,
-      n8n automation, Salesforce, ROS, Tailwind CSS, Figma.
-    </p>
-  </section>
+    <div class="card">
+      <h3>Underwater Inspection Robot</h3>
+      <p class="tech">ROS • OpenCV • Arduino • PID control</p>
+      <p>Techgium-winning robot for industrial tank defect detection; full autonomy & live video feed.</p>
+    </div>
 
-  <!-- ---------- FOOTER ---------- -->
-  <footer class="fade-in">
-    © 2025 Apoorva Srinivasan – hosted on GitHub Pages
-  </footer>
+    <div class="card">
+      <h3>Agrobot</h3>
+      <p class="tech">Arduino • Fusion 360 • Manual RF control</p>
+      <p>Plowing & seed-sowing field robot; SIH 2023 third-round finalist.</p>
+    </div>
 
-  <!-- simple fade-in trigger -->
-  <script>
-    const io=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>e.target.classList.add('fade-in'));
-    },{threshold:.2});
-    document.querySelectorAll('section, .hero').forEach(el=>io.observe(el));
-  </script>
+    <div class="card">
+      <h3>n8n Automation Templates</h3>
+      <p class="tech">n8n • REST APIs • Webhooks</p>
+      <p>15+ reusable workflows: lead-capture, Slack alerts, DB sync, SF → Google-Sheets etc.</p>
+    </div>
+
+    <div class="card">
+      <h3>Salesforce Community CI/CD</h3>
+      <p class="tech">SFDX • GitHub Actions • Experience-Cloud</p>
+      <p>Portal site with pull-request → scratch-org → prod pipeline; zero-click deploys.</p>
+    </div>
+
+    <!-- Résumé-only projects (no public repo yet) -->
+    <div class="card">
+      <h3>Smart Stocking System</h3>
+      <p class="tech">AGV • Line-follow • Robotic-arm • MySQL</p>
+      <p>Automated pick-and-place restocking robot for retail stores.</p>
+    </div>
+
+    <div class="card">
+      <h3>F1 Race-Winner Predictor</h3>
+      <p class="tech">Python • Pandas • Scikit-learn</p>
+      <p>ML model forecasting GP winner based on live telemetry & historical stats.</p>
+    </div>
+
+    <div class="card">
+      <h3>Google-Maps API Playground</h3>
+      <p class="tech">JavaScript • Directions • Places • Geocoding</p>
+      <p>Minimal sandbox exploring routing, place search and live traffic layers.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ---------- FOOTER ---------- -->
+<footer>
+  © 2025 Apoorva Srinivasan – built for Amazon-shortlist readiness
+</footer>
 
 </body>
 </html>
